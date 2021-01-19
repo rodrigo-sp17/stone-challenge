@@ -1,5 +1,8 @@
 package challenge;
 
+/**
+ * Class representing an item on a shopping cart
+ */
 public class CartItem {
 
     private final String itemName;

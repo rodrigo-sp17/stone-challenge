@@ -5,9 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Class containing the method implementation for Stone's Elixir challenge.
+ * Testing is done with JUnit on the ChallengeTest class. It can be run on IntelliJ IDEA or with
+ * Maven.
+ */
 public class Challenge {
-
-    private List<CartItem> shoppingCart;
 
     /**
      * Splits the total price of the cart between each provided email
@@ -17,12 +20,13 @@ public class Challenge {
      */
     public static Map<String, Long> splitValues(List<CartItem> cart, List<String> emails) {
         if (emails.isEmpty()) {
+            // If there are no emails, there's no need to do anything else
             return Collections.emptyMap();
         }
 
         Map<String, Long> splitResult = new HashMap<>();
 
-        // Gets the total of the cart
+        // Gets the total of the cart, or 0 if it is empty
         Long totalPrice = 0L;
         if (!cart.isEmpty()) {
             totalPrice = cart.stream()
