@@ -5,9 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Class containing the method implementation for Stone's Elixir challenge.
+ * Testing is done with JUnit on the ChallengeTest class. It can be run on IntelliJ IDEA or with
+ * Maven.
+ */
 public class Challenge {
-
-    private List<CartItem> shoppingCart;
 
     /**
      * Splits the total price of the cart between each provided email
